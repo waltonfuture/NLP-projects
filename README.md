@@ -19,4 +19,4 @@ Baseline model is a SGDClassifier. I use bert-base-uncased pretrained model to i
 
 ## FOFE Adapter
 
-Fifixedsize ordinally-forgetting encoding (FOFE) can almost uniquely encode any variable-length sequence of words into a fifixed-size representation. It can model the word order in a sequence using a simple ordinally-forgetting mechanism according to the positions of words. FOFELayerWindows are added to the BERT encoder to help the pretrained model better understand tokens' relationship based on GLUE dataset.
+Fixed-size ordinally-forgetting encoding (FOFE) can almost uniquely encode any variable-length sequence of words into a fifixed-size representation. It can model the word order in a sequence using a simple ordinally-forgetting mechanism according to the positions of words. FOFELayerWindows are added to the BERT encoder to help the pretrained model better understand tokens' relationship based on GLUE dataset.
