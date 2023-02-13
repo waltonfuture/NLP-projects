@@ -1,4 +1,7 @@
+<p align="center">
 <h1 style="text-align:center;">FOFE in Adapter</h1>
+</p>
+
 
 The FOFE (Fixed-Size Ordered Frequent-pattern based Embedding) layer is a type of neural network layer used in NLP tasks. It is used for learning word representations by combining the information from frequent patterns and their order in the data.
 
@@ -15,5 +18,8 @@ For example, we can set **window_size** as 3, and **input_len** as 8. The **FOFE
 
 ## run the scripts:
 
+```shell
 bash run_glue_adapter.bash
+```
+
 
