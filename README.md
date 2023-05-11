@@ -20,3 +20,8 @@ Baseline model is a SGDClassifier. I use bert-base-uncased pretrained model to i
 ## FOFE Adapter
 
 Fixed-size ordinally-forgetting encoding (FOFE) can almost uniquely encode any variable-length sequence of words into a fifixed-size representation. It can model the word order in a sequence using a simple ordinally-forgetting mechanism according to the positions of words. FOFELayerWindows are added to the BERT encoder to help the pretrained model better understand tokens' relationship based on GLUE dataset.
+
+
+## MTBart
+
+MTBart modifies the decoder of BART. The initial BART decoder is sequential and autoregressive and it only considers the forward context. A new bi-directional decoder is developed, which can collect forward and backward contexts for prediction. The new decoder is a five-stream self-attention structure. The first one is a L2R stream. The second one is a R2L stream, which uses reversed input_ids. The third one uses the hidden states from L2R stream and the forth one uses the hidden states from R2L stream. The last stream uses both of the hidden states. The last three streams’ prediction are concated for finetuning.
